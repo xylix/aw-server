@@ -99,6 +99,17 @@ class InfoResource(Resource):
         return current_app.api.get_info()
 
 
+# KEY-VALUE STORAGE ACCESS
+
+@api.route("/0/value/<string:key>")
+class KeyValues(Resource):
+    def get(self, key) -> str:
+        return current_app.api.get_value(key)
+
+    def post(self, key):
+        current_app.api.post_value(key, request.data)
+
+
 # BUCKETS
 
 @api.route("/0/buckets/")

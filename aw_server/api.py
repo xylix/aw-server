@@ -60,6 +60,17 @@ class ServerAPI:
         }
         return payload
 
+    # class KeyValues(Resource):
+    # def get(self, key) -> str:
+    #    return current_app.api.get_value(key)
+    #   def post(self, key):
+    #      current_app.api.post_value(key, request.data)
+    def get_value(self, key):
+        return self.db.
+
+    def post_value(self, key, data):
+        db.
+
     def get_buckets(self) -> Dict[str, Dict]:
         """Get dict {bucket_name: Bucket} of all buckets"""
         logger.debug("Received get request for buckets")
